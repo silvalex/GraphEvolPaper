@@ -1,0 +1,48 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Aversano \bgroup \em et al.\egroup
+  }{2006}]{aversano2006genetic}
+Lerina Aversano, Massimiliano Di~Penta, and Kunal Taneja.
+\newblock A genetic programming approach to support the design of service
+  compositions.
+\newblock {\em International Journal of Computer Systems Science \&
+  Engineering}, 21(4):247--254, 2006.
+
+\bibitem[\protect\citeauthoryear{Bansal \bgroup \em et al.\egroup
+  }{2008}]{bansal2008wsc}
+Ajay Bansal, M~Brian Blake, Srividya Kona, Steffen Bleul, Thomas Weise, and
+  Michael~C Jaeger.
+\newblock Wsc-08: continuing the web services challenge.
+\newblock In {\em E-Commerce Technology and the Fifth IEEE Conference on
+  Enterprise Computing, E-Commerce and E-Services, 2008 10th IEEE Conference
+  on}, pages 351--354. IEEE, 2008.
+
+\bibitem[\protect\citeauthoryear{da Silva \bgroup \em et al.\egroup
+  }{2014}]{silva2014graph}
+A.S. da~Silva, Hui Ma, and Mengjie Zhang.
+\newblock A graph-based particle swarm optimisation approach to qos-aware web
+  service composition and selection.
+\newblock In {\em Evolutionary Computation (CEC), 2014 IEEE Congress on}, pages
+  3127--3134, July 2014.
+
+\bibitem[\protect\citeauthoryear{Kuster \bgroup \em et al.\egroup
+  }{2008}]{kuster2008opossum}
+U~Kuster, Birgitta Konig-Ries, and Andreas Krug.
+\newblock Opossum-an online portal to collect and share sws descriptions.
+\newblock In {\em Semantic Computing, 2008 IEEE International Conference on},
+  pages 480--481. IEEE, 2008.
+
+\bibitem[\protect\citeauthoryear{Rodriguez-Mier \bgroup \em et al.\egroup
+  }{2010}]{rodriguez2010composition}
+Pablo Rodriguez-Mier, Manuel Mucientes, Manuel Lama, and Miguel~I Couto.
+\newblock Composition of web services through genetic programming.
+\newblock {\em Evolutionary Intelligence}, 3(3-4):171--186, 2010.
+
+\bibitem[\protect\citeauthoryear{Srivastava and
+  Koehler}{2003}]{srivastava2003web}
+Biplav Srivastava and Jana Koehler.
+\newblock Web service composition-current solutions and open problems.
+\newblock In {\em ICAPS 2003 workshop on Planning for Web Services}, volume~35,
+  pages 28--35, 2003.
+
+\end{thebibliography}
