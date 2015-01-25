@@ -1,37 +1,13 @@
-%%%% ijcai15.tex
-
-\typeout{IJCAI-15 Instructions for Authors}
-
-% These are the instructions for authors for IJCAI-15.
-% They are the same as the ones for IJCAI-11 with superficical wording
-%   changes only.
+%\typeout{IJCAI-15 Instructions for Authors}
 
 \documentclass{article}
 % The file ijcai15.sty is the style file for IJCAI-15 (same as ijcai07.sty).
 \usepackage{ijcai15, graphicx, times}
+\usepackage[ruled,vlined]{algorithm2e}
 
-% the following package is optional:
-%\usepackage{latexsym} 
-
-% Following comment is from ijcai97-submit.tex:
-% The preparation of these files was supported by Schlumberger Palo Alto
-% Research, AT\&T Bell Laboratories, and Morgan Kaufmann Publishers.
-% Shirley Jowell, of Morgan Kaufmann Publishers, and Peter F.
-% Patel-Schneider, of AT\&T Bell Laboratories collaborated on their
-% preparation.
-
-% These instructions can be modified and used in other conferences as long
-% as credit to the authors and supporting agencies is retained, this notice
-% is not changed, and further modification or reuse is not restricted.
-% Neither Shirley Jowell nor Peter F. Patel-Schneider can be listed as
-% contacts for providing assistance without their prior permission.
-
-% To use for other conferences, change references to files and the
-% conference appropriate and use other authors, contacts, publishers, and
-% organizations.
-% Also change the deadline and address for returning papers and the length and
-% page charge instructions.
-% Put where the files are available in the appropriate places.
+\SetAlgoCaptionSeparator{.\space}
+\renewcommand\AlCapFnt{\normalfont\scshape}
+\setlength{\algomargin}{0.7cm}
 
 \title{GraphEvol: A Graph Evolution Technique for Web Service Composition}
 
@@ -136,7 +112,80 @@ the master graph structure is built ensuring full matching of services inputs an
 GraphEvol, the evolutionary computation approach proposed in this work, bears many similarities with the GP approaches discussed above. Namely, it initialises and a population 
 of candidates that are encoded using non-linear data structures, evolves this population using crossover and mutation operators, and evaluates the quality of each candidate
 based on the nodes included in its structure. However, as opposed to representing candidate compositions as trees that correspond to underlying graph structures, GraphEvol
-represents them directly as graphs. As a consequence, the mutation and crossover operators must be implemented differently, and so must the fitness function.
+represents them directly as graphs. Figure \ref{fig:graphExample} shows a graph representation example that is equivalent to the candidate tree shown in Figure \ref{fig:treeExample}. As a consequence of this direct graph representation, the mutation and crossover operators must be implemented differently, and so must the fitness function. Another important aspect of GraphEvol is that is uses a graph-building algorithm for creating new  solutions, and for performing mutation and crossover. The general procedure for GraphEvol is shown in Algorithm \ref{graphEvolSteps}, however each fundamental aspect of the proposed technique is explored in more detail in the following subsections.
+
+\begin{figure}
+\centerline{
+\fbox{
+\includegraphics[width=8cm]{graphExample.pdf}}}
+\caption{Example of a candidate composition graph using GraphEvol.}
+\label{fig:graphExample}
+\end{figure}
+
+\begin{algorithm}
+ \setlength\hsize{0.9\linewidth}
+ \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+ \let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}
+ \LinesNumbered
+	\textbf{1.} Initialise the population using the graph building algorithm.\\
+	\nonl \While {max. generations not met}{
+	
+	\textbf{2.} Select the fittest graph candidates for reproduction.\\
+	\textbf{3.} Apply mutation, crossover, and elitism to the selected candidates, generating offspring.\\
+	\textbf{4.} Evaluate the fitness of the new graph individuals.\\
+	\textbf{5.} Replace the lowest-fitness individuals in the population with the new graph individuals.\\
+	}
+ \caption{\footnotesize Steps in the GraphEvol search approach.}
+\label{graphEvolSteps}
+\end{algorithm}
+
+\subsection{Graph-building algorithm}
+
+\begin{algorithm}
+ \setlength\hsize{0.9\linewidth}
+ \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+ \SetKwFunction{connectNode}{connectNode}\SetKwFunction{findCands}{findCands}
+ \LinesNumbered
+ \SetNlSty{}{}{:}
+ \Input{$I$, $O$, $relevant$}
+ \Output{candidate graph $G$}
+ $start.outputs \leftarrow \{I\}$\;
+ $end.inputs \leftarrow \{O\}$\;
+ $G.edges \leftarrow \{\}$\;
+ $G.nodes \leftarrow \{start\}$\;
+ $seenNodes \leftarrow \{start\}$\;
+ $currEndInputs \leftarrow \{start.outputs\}$\;
+ $candidateList \leftarrow$ \findCands{$seenNodes, relevant$}\;
+ \While{$end.inputs \not\sqsubseteq currentEndInputs$}{
+ $cand \leftarrow candidateList.next()$\;
+ \If{$cand \not\in seenNodes \wedge cand.inputs \sqsubseteq currEndInputs$}{
+ \connectNode{$cand, G$}\;
+ $currEndInputs \leftarrow currEndInputs \cup \{cand.outputs\}$\;
+ $seenNodes \leftarrow seenNodes \cup \{cand\}$\;
+ $candidateList \leftarrow candidateList \cup$ \findCands{$seenNodes, relevant$}\; 
+ }}
+ \connectNode{$end, G$}\;
+ \KwRet $G$\;
+ \vspace{2mm}
+ \SetKwProg{myproc}{Procedure}{}{}
+ \myproc{\connectNode{$n, G$}}{
+  $G.nodes \leftarrow G.nodes \cup \{n\}$\;
+   $inputsToFulfil \leftarrow \{cand.inputs\}$\;
+ \While{$|inputsToFulfil| > 0$}{
+	$graphN \leftarrow G.nodes.next()$\; 
+	\If{$|n.inputs \sqcap graphN.outputs| > 0$}{
+	  $inputsToFulfil \leftarrow inputsToFulfil - (n.inputs \sqcap graphN.outputs)$\;
+	  $G.edges \leftarrow G.edges \cup \{graphN \rightarrow n\}$\;
+    }
+ }}
+ \caption{\footnotesize Generating a new candidate graph.}
+\label{generation}
+\end{algorithm}
+
+\subsection{Mutation and crossover}
+
+\subsection{Fitness function}
 
 
 \section{Experiment Design}\label{experimentdesign}
