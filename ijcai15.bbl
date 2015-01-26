@@ -51,6 +51,13 @@ Zhenqiu Huang, Wei Jiang, Songlin Hu, and Zhiyong Liu.
 \newblock In {\em Commerce and Enterprise Computing, 2009. CEC'09. IEEE
   Conference on}, pages 519--522. IEEE, 2009.
 
+\bibitem[\protect\citeauthoryear{Jaeger and M{\"u}hl}{2007}]{jaeger2007qos}
+Michael~C Jaeger and Gero M{\"u}hl.
+\newblock Qos-based selection of services: The implementation of a genetic
+  algorithm.
+\newblock In {\em Communication in Distributed Systems (KiVS), 2007 ITG-GI
+  Conference}, pages 1--12. VDE, 2007.
+
 \bibitem[\protect\citeauthoryear{Kuster \bgroup \em et al.\egroup
   }{2008}]{kuster2008opossum}
 U~Kuster, Birgitta Konig-Ries, and Andreas Krug.

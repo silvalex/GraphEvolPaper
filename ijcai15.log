@@ -1,19 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013) (format=pdflatex 2014.11.27)  26 JAN 2015 17:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.12.20)  26 JAN 2015 21:29
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **ijcai15.tex
-(./ijcai15.tex
+(C:\Users\Alex\git\GraphEvolPaper\ijcai15.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8l> and hyphenation patterns for english, dumylang, nohyphenation, uk
-rainian, turkish, swedish, spanish, slovenian, slovak, serbian, russian, romani
-an, portuguese, polish, bokmal, nynorsk, latin, italian, irish, indonesian, ice
-landic, hungarian, monogreek, greek, german, ngerman, french, finnish, estonian
-, esperanto, dutch, danish, czech, croatian, catalan, bulgarian, basque, loaded
-.
-(/usr/pkg/share/texmf-dist/tex/latex/base/article.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/pkg/share/texmf-dist/tex/latex/base/size10.clo
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
 File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -27,35 +29,36 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./ijcai15.sty
+)
+(C:\Users\Alex\git\GraphEvolPaper\ijcai15.sty
 Conference Style, version of 6 September 1995 (revised Nov 2010)
 \titlebox=\skip43
 Named Citation Style, version of 30 November 1994
-) (/usr/pkg/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/pkg/share/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/pkg/share/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/pkg/share/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
@@ -63,9 +66,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/times.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (./flushend.sty
+)
+(C:\Users\Alex\git\GraphEvolPaper\flushend.sty
 Package: flushend 1997/10/01
 \@aaa=\box26
 \@ccc=\box27
@@ -75,16 +79,17 @@ Package: flushend 1997/10/01
 \@extra@skip=\dimen105
 \@nd@page@rule=\dimen106
 )
-(./algorithm2e.sty
+(C:\Users\Alex\git\GraphEvolPaper\algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count88
- (/usr/pkg/share/texmf-dist/tex/latex/base/ifthen.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/pkg/share/texmf-dist/tex/latex/tools/xspace.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
 )
-(/usr/pkg/share/texmf-dist/tex/latex/relsize/relsize.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 
 
@@ -132,9 +137,7 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \c@algocf=\count91
 \algocf@algoframe=\box36
 \algocf@algobox=\box37
-) (./ijcai15.aux)
-\openout1 = `ijcai15.aux'.
-
+) (C:\Users\Alex\git\GraphEvolPaper\ijcai15.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
@@ -148,10 +151,11 @@ LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 23.
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-(/usr/pkg/share/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count92
 \scratchdimen=\dimen113
@@ -164,54 +168,7 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \MPnumerator=\count96
 \makeMPintoPDFobject=\count97
 \everyMPtoPDFconversion=\toks17
-) (/usr/pkg/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/pkg/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/pkg/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/pkg/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -223,79 +180,74 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 25.
-
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-
-
-]
-<compositionExample.pdf, id=10, 343.96002pt x 253.09555pt>
+<compositionExample.pdf, id=1, 343.96002pt x 253.09555pt>
 File: compositionExample.pdf Graphic file (type pdf)
 
 <use compositionExample.pdf>
-Package pdftex.def Info: compositionExample.pdf used on input line 86.
+Package pdftex.def Info: compositionExample.pdf used on input line 44.
 (pdftex.def)             Requested size: 227.62204pt x 167.49155pt.
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
-<treeExample.pdf, id=11, 384.16022pt x 289.41876pt>
+
+
+ <C:/Users/Alex/git/GraphEvolPaper/compositionExample.pdf>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+
+<treeExample.pdf, id=39, 384.16022pt x 289.41876pt>
 File: treeExample.pdf Graphic file (type pdf)
  <use treeExample.pdf>
 Package pdftex.def Info: treeExample.pdf used on input line 102.
 (pdftex.def)             Requested size: 227.62204pt x 171.48425pt.
 
-Underfull \vbox (badness 1189) has occurred while \output is active []
-
- [2 <./compositionExample.pdf> <./treeExample.pdf
-
-pdfTeX warning: /usr/pkg/bin/pdflatex (file ./treeExample.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->] <graphExample.pdf, id=75, 384.16022pt x 382.88045pt>
+[2 <C:/Users/Alex/git/GraphEvolPaper/treeExample.pdf>]
+<graphExample.pdf, id=75, 384.16022pt x 382.88045pt>
 File: graphExample.pdf Graphic file (type pdf)
  <use graphExample.pdf>
-Package pdftex.def Info: graphExample.pdf used on input line 122.
+Package pdftex.def Info: graphExample.pdf used on input line 117.
 (pdftex.def)             Requested size: 227.62204pt x 226.86147pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 129.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
 
-Underfull \vbox (badness 3281) has occurred while \output is active []
-
- [3 <./graphExample.pdf>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 179.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 179.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 187.
-
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-<mutationExample.pdf, id=112, 330.4094pt x 126.8489pt>
+<mutationExample.pdf, id=76, 330.4094pt x 126.8489pt>
 File: mutationExample.pdf Graphic file (type pdf)
 
 <use mutationExample.pdf>
-Package pdftex.def Info: mutationExample.pdf used on input line 231.
+Package pdftex.def Info: mutationExample.pdf used on input line 157.
 (pdftex.def)             Requested size: 227.62204pt x 87.38647pt.
+ [3 <C:/Users/Alex/git/GraphEvolPaper/graphExample.pdf> <C:/Users/Alex/git/Grap
+hEvolPaper/mutationExample.pdf
 
-<crossoverExample.pdf, id=113, 284.18672pt x 458.19931pt>
+pdfTeX warning: pdflatex (file C:/Users/Alex/git/GraphEvolPaper/mutationExample
+.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 176.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 176.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 184.
+
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [4]
+<crossoverExample.pdf, id=157, 284.18672pt x 458.19931pt>
 File: crossoverExample.pdf Graphic file (type pdf)
 
 <use crossoverExample.pdf>
-Package pdftex.def Info: crossoverExample.pdf used on input line 257.
+Package pdftex.def Info: crossoverExample.pdf used on input line 265.
 (pdftex.def)             Requested size: 227.62204pt x 367.0144pt.
- [4 <./mutationExample.pdf>] [5 <./crossoverExample.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 322.
+(Font)              <9> on input line 304.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 322.
- [6
-
-] [7] (./ijcai15.bbl
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 304.
+ [5 <C:/Users/Alex/git/GraphEvolPaper/crossoverExample.pdf>] [6] (C:\Users\Alex
+\git\GraphEvolPaper\ijcai15.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 5--10
 []\OT1/ptm/m/n/10 Lerina Aver-sano, Mas-si-m-il-iano
  []
@@ -306,79 +258,76 @@ Underfull \hbox (badness 1033) in paragraph at lines 13--19
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 63--66
+Underfull \hbox (badness 10000) in paragraph at lines 70--73
 []\OT1/ptm/m/n/10 Nikola Mi-lanovic and
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 63--66
+Underfull \hbox (badness 1009) in paragraph at lines 70--73
 \OT1/ptm/m/n/10 Miroslaw Malek.  Cur-rent so-lu-tions for web ser-vice
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 63--66
+Underfull \hbox (badness 1173) in paragraph at lines 70--73
 \OT1/ptm/m/n/10 com-po-si-tion.  \OT1/ptm/m/it/10 IEEE In-ter-net Com-put-ing\O
 T1/ptm/m/n/10 , 8(6):51--59,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 74--79
+Underfull \hbox (badness 10000) in paragraph at lines 81--86
 []\OT1/ptm/m/n/10 Xiaofeng Qi and Francesco
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--85
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 []\OT1/ptm/m/n/10 Pablo Rodriguez-Mier,
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 82--85
+Underfull \hbox (badness 4366) in paragraph at lines 89--92
 \OT1/ptm/m/n/10 Com-po-si-tion of web ser-vices through ge-netic pro-
  []
 
 
-Underfull \hbox (badness 2772) in paragraph at lines 102--106
+Underfull \hbox (badness 2772) in paragraph at lines 109--113
 []\OT1/ptm/m/n/10 Anqi Wang, Hui Ma, and Mengjie
  []
 
 )
-Extra height:0.0pt when 447.1524pt
-(2)Left:447.1524pt Right:454.1399pt Output:447.1524pt
-(2)Left:454.1399pt Right:428.1399pt Output:454.1399pt
+Extra height:0.0pt when 476.6524pt
+(2)Left:476.6524pt Right:477.30481pt Output:476.6524pt
+(2)Left:477.30481pt Right:477.30481pt Output:477.30481pt
 - LAST -
 Extra skip:0.0pt
-Left:454.1399pt
-Right:428.1399pt
-Output:454.1399pt
- [8
+Left:477.30481pt
+Right:477.30481pt
+Output:477.30481pt
+ [7
 
-] (./ijcai15.aux) ) 
+] (C:\Users\Alex\git\GraphEvolPaper\ijcai15.aux) ) 
 Here is how much of TeX's memory you used:
- 3129 strings out of 493945
- 43994 string characters out of 6159095
- 136425 words of memory out of 5000000
- 6331 multiletter control sequences out of 15000+600000
- 25110 words of font info for 50 fonts, out of 8000000 for 9000
- 774 hyphenation exceptions out of 8191
- 38i,17n,26p,1259b,448s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
-/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/pkg/share/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/pkg/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr10.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmr7.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
-sr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/pkg/shar
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/pkg/share/texmf-dist/font
-s/type1/urw/times/utmb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ijcai15.pdf (8 pages, 1058737 bytes).
+ 2773 strings out of 493921
+ 38099 string characters out of 3147284
+ 128126 words of memory out of 3000000
+ 6055 multiletter control sequences out of 15000+200000
+ 25110 words of font info for 50 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 27i,17n,26p,1259b,450s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/
+fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
+s/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi
+9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on ijcai15.pdf (7 pages, 1084321 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
