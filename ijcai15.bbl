@@ -17,6 +17,13 @@ Ajay Bansal, M~Brian Blake, Srividya Kona, Steffen Bleul, Thomas Weise, and
   Enterprise Computing, E-Commerce and E-Services, 2008 10th IEEE Conference
   on}, pages 351--354. IEEE, 2008.
 
+\bibitem[\protect\citeauthoryear{Chen and Yan}{2014}]{chen2014qos}
+Min Chen and Yuhong Yan.
+\newblock Qos-aware service composition over graphplan through graph
+  reachability.
+\newblock In {\em Services Computing (SCC), 2014 IEEE International Conference
+  on}, pages 544--551. IEEE, 2014.
+
 \bibitem[\protect\citeauthoryear{da Silva \bgroup \em et al.\egroup
   }{2014}]{silva2014graph}
 A.S. da~Silva, Hui Ma, and Mengjie Zhang.
@@ -25,12 +32,50 @@ A.S. da~Silva, Hui Ma, and Mengjie Zhang.
 \newblock In {\em Evolutionary Computation (CEC), 2014 IEEE Congress on}, pages
   3127--3134, July 2014.
 
+\bibitem[\protect\citeauthoryear{Deng \bgroup \em et al.\egroup
+  }{2013}]{deng2013efficient}
+Shuiguang Deng, Bin Wu, Jianwei Yin, and Zhaohui Wu.
+\newblock Efficient planning for top-k web service composition.
+\newblock {\em Knowledge and information systems}, 36(3):579--605, 2013.
+
+\bibitem[\protect\citeauthoryear{Gottschalk \bgroup \em et al.\egroup
+  }{2002}]{gottschalk2002introduction}
+Karl Gottschalk, Stephen Graham, Heather Kreger, and James Snell.
+\newblock Introduction to web services architecture.
+\newblock {\em IBM systems Journal}, 41(2):170--177, 2002.
+
+\bibitem[\protect\citeauthoryear{Huang \bgroup \em et al.\egroup
+  }{2009}]{huang2009effective}
+Zhenqiu Huang, Wei Jiang, Songlin Hu, and Zhiyong Liu.
+\newblock Effective pruning algorithm for qos-aware service composition.
+\newblock In {\em Commerce and Enterprise Computing, 2009. CEC'09. IEEE
+  Conference on}, pages 519--522. IEEE, 2009.
+
 \bibitem[\protect\citeauthoryear{Kuster \bgroup \em et al.\egroup
   }{2008}]{kuster2008opossum}
 U~Kuster, Birgitta Konig-Ries, and Andreas Krug.
 \newblock Opossum-an online portal to collect and share sws descriptions.
 \newblock In {\em Semantic Computing, 2008 IEEE International Conference on},
   pages 480--481. IEEE, 2008.
+
+\bibitem[\protect\citeauthoryear{Milanovic and
+  Malek}{2004}]{milanovic2004current}
+Nikola Milanovic and Miroslaw Malek.
+\newblock Current solutions for web service composition.
+\newblock {\em IEEE Internet Computing}, 8(6):51--59, 2004.
+
+\bibitem[\protect\citeauthoryear{Perrey and Lycett}{2003}]{perrey2003service}
+Randall Perrey and Mark Lycett.
+\newblock Service-oriented architecture.
+\newblock In {\em Applications and the Internet Workshops, 2003. Proceedings.
+  2003 Symposium on}, pages 116--119. IEEE, 2003.
+
+\bibitem[\protect\citeauthoryear{Qi and Palmieri}{1994}]{qi1994theoretical}
+Xiaofeng Qi and Francesco Palmieri.
+\newblock Theoretical analysis of evolutionary algorithms with an infinite
+  population size in continuous space. part ii: Analysis of the diversification
+  role of crossover.
+\newblock {\em Neural Networks, IEEE Transactions on}, 5(1):120--129, 1994.
 
 \bibitem[\protect\citeauthoryear{Rodriguez-Mier \bgroup \em et al.\egroup
   }{2010}]{rodriguez2010composition}
@@ -44,5 +89,26 @@ Biplav Srivastava and Jana Koehler.
 \newblock Web service composition-current solutions and open problems.
 \newblock In {\em ICAPS 2003 workshop on Planning for Web Services}, volume~35,
   pages 28--35, 2003.
+
+\bibitem[\protect\citeauthoryear{Wang \bgroup \em et al.\egroup
+  }{2012}]{wang2012survey}
+Lijuan Wang, Jun Shen, and Jianming Yong.
+\newblock A survey on bio-inspired algorithms for web service composition.
+\newblock In {\em Computer Supported Cooperative Work in Design (CSCWD), 2012
+  IEEE 16th International Conference on}, pages 569--574. IEEE, 2012.
+
+\bibitem[\protect\citeauthoryear{Wang \bgroup \em et al.\egroup
+  }{2013}]{wang2013genetic}
+Anqi Wang, Hui Ma, and Mengjie Zhang.
+\newblock Genetic programming with greedy search for web service composition.
+\newblock In {\em Database and Expert Systems Applications}, pages 9--17.
+  Springer, 2013.
+
+\bibitem[\protect\citeauthoryear{Yoo \bgroup \em et al.\egroup
+  }{2008}]{yoo2008web}
+John Jung-Woon Yoo, Soundar Kumara, Dongwon Lee, and Seog-Chan Oh.
+\newblock A web service composition framework using integer programming with
+  non-functional objectives and constraints.
+\newblock {\em algorithms}, 1:7, 2008.
 
 \end{thebibliography}

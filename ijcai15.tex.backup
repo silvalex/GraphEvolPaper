@@ -1,37 +1,13 @@
-%%%% ijcai15.tex
-
-\typeout{IJCAI-15 Instructions for Authors}
-
-% These are the instructions for authors for IJCAI-15.
-% They are the same as the ones for IJCAI-11 with superficical wording
-%   changes only.
+%\typeout{IJCAI-15 Instructions for Authors}
 
 \documentclass{article}
 % The file ijcai15.sty is the style file for IJCAI-15 (same as ijcai07.sty).
 \usepackage{ijcai15, graphicx, times}
+\usepackage[ruled,vlined]{algorithm2e}
 
-% the following package is optional:
-%\usepackage{latexsym} 
-
-% Following comment is from ijcai97-submit.tex:
-% The preparation of these files was supported by Schlumberger Palo Alto
-% Research, AT\&T Bell Laboratories, and Morgan Kaufmann Publishers.
-% Shirley Jowell, of Morgan Kaufmann Publishers, and Peter F.
-% Patel-Schneider, of AT\&T Bell Laboratories collaborated on their
-% preparation.
-
-% These instructions can be modified and used in other conferences as long
-% as credit to the authors and supporting agencies is retained, this notice
-% is not changed, and further modification or reuse is not restricted.
-% Neither Shirley Jowell nor Peter F. Patel-Schneider can be listed as
-% contacts for providing assistance without their prior permission.
-
-% To use for other conferences, change references to files and the
-% conference appropriate and use other authors, contacts, publishers, and
-% organizations.
-% Also change the deadline and address for returning papers and the length and
-% page charge instructions.
-% Put where the files are available in the appropriate places.
+\SetAlgoCaptionSeparator{.\space}
+\renewcommand\AlCapFnt{\normalfont\scshape}
+\setlength{\algomargin}{0.7cm}
 
 \title{GraphEvol: A Graph Evolution Technique for Web Service Composition}
 
@@ -58,16 +34,16 @@ Engineering and Computer Science, Victoria University of Wellington, New Zealand
 \section{Introduction}
 
 A Web service can be defined as a software module that accomplishes a specific task and that is made available for requests over
-the Internet. The fundamental benefit of such modules is that they can be interwoven with new applications, preventing developers from rewriting
+the Internet \cite{gottschalk2002introduction}. The fundamental benefit of such modules is that they can be interwoven with new applications, preventing developers from rewriting
 functionality that has already been implemented. Service-Oriented Architecture (SOA) is a paradigm that expands on this idea, advocating
-that the main atomic components of a software system should be Web services, since this maximizes code reuse and information sharing.
+that the main atomic components of a software system should be Web services, since this maximizes code reuse and information sharing \cite{perrey2003service}.
 As services are typically present standard interfaces, the possibility arises to create approaches capable of combining services
-automatically according to the final desired system, in a process known as \textit{Web service composition}. The objective of these approaches
+automatically according to the final desired system, in a process known as \textit{Web service composition} \cite{milanovic2004current}. The objective of these approaches
 is to produce a workflow, i.e. a directed acyclic graph (DAG), stipulating the sequence in which each atomic service should be executed, as well as
 the output-input connections between services.
 
-Many approaches to Web service composition have been proposed in the literature, from variations on AI planning techniques to the employment
-of integer linear programming solvers. In particular, promising results have been achieved with the use of Evolutionary Computation (EC) techniques,
+Many approaches to Web service composition have been proposed in the literature, from variations on AI planning techniques \cite{deng2013efficient} to the employment
+of integer linear programming solvers \cite{yoo2008web}. In particular, promising results have been achieved with the use of Evolutionary Computation (EC) techniques \cite{wang2012survey},
 because their search methods successfully handle the large search space characteristic of the composition problem. Existing evolutionary
 techniques for fully automated Web service composition can be divided into two different groups according to the extent of the composition they
 perform: \textit{semi-automated composition techniques}, assume that a general workflow of abstract tasks has already been provided and that the
@@ -76,11 +52,13 @@ assumption, meaning that they construct the task workflow and select the most su
 fully automated composition techniques are the focus of this paper.
 
 While semi-automated composition can be accomplished using a variety of techniques such as Genetic Algorithms (GA) and Particle Swarm Optimisation
-(PSO) \cite{}, fully automated composition using EC is currently mostly restricted to techniques employing the traditional Genetic Programming (GP) model \cite{rodriguez2010composition}.
+(PSO) \cite{silva2014graph}, fully automated composition using EC is currently mostly restricted to techniques employing the traditional Genetic Programming (GP) model \cite{rodriguez2010composition}.
 In this paradigm, each each composition candidate is a tree that represents an underlying graph solution that can be obtained through a translation
 process. The question then arises whether it is possible to represent a candidate directly as a graph, and whether the system's performance is affected
 from doing so. Thus, the objective of this paper is to present and analyse \textit{GraphEvol}, an evolutionary computation technique for Web service
-composition where each candidate is represented as a DAG and modified while remaining in that form. The remainder of this paper is organised as follows:
+composition where each candidate is represented as a DAG and modified while remaining in that form. Apart from possible performance gains, the main
+advantage of GraphEvol is that it represents each solution in an intuitive and direct way, allowing a more powerful way of ensuring that solutions
+meet correctness constraints. The remainder of this paper is organised as follows:
 Section \ref{background} presents background information concerning Web service composition; Section \ref{graphevol} presents the proposed technique;
 Section \ref{experimentdesign} discusses the experiments conducted to compare the performance GraphEvol to that of a GP composition approach;
 Section \ref{results} describes the experiment results; Section \ref{conclusions} concludes the paper.
@@ -133,16 +111,195 @@ are evolved using the classical PSO algorithm, and at each generation the fitnes
 the master graph structure is built ensuring full matching of services inputs and outputs, the fitness function employed for evolution optimises the population according to non-functional quality (QoS) measures such as response time, availability, and reliability.
 
 \section{GraphEvol}\label{graphevol}
+GraphEvol, the evolutionary computation approach proposed in this work, bears many similarities with the GP approaches discussed above. Namely, it initialises and a population 
+of candidates that are encoded using non-linear data structures, evolves this population using crossover and mutation operators, and evaluates the quality of each candidate
+based on the nodes included in its structure. However, as opposed to representing candidate compositions as trees that correspond to underlying graph structures, GraphEvol
+represents them directly as graphs with Web service nodes. Figure \ref{fig:graphExample} shows a graph representation example that is equivalent to the candidate tree shown in Figure \ref{fig:treeExample}. As a consequence of this direct graph representation, the mutation and crossover operators must be implemented differently, and so must the fitness function. Another important aspect of GraphEvol is that is uses a graph-building algorithm for creating new  solutions, and for performing mutation and crossover. The general procedure for GraphEvol is shown in Algorithm \ref{graphEvolSteps}, however each fundamental aspect of the proposed technique is explored in more detail in the following subsections.
 
+\begin{figure}
+\centerline{
+\fbox{
+\includegraphics[width=8cm]{graphExample.pdf}}}
+\caption{Example of a candidate composition in GraphEvol.}
+\label{fig:graphExample}
+\end{figure}
 
+\begin{algorithm}
+ \setlength\hsize{0.9\linewidth}
+ \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+ \let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}
+ \LinesNumbered
+	\textbf{1.} Initialise the population using the graph building algorithm.\\
+	\nonl \While {max. generations not met}{
+	
+	\textbf{2.} Select the fittest graph candidates for reproduction.\\
+	\textbf{3.} Perform mutation and crossover on the selected candidates, generating offspring.\\
+	\textbf{4.} Evaluate the fitness of the new graph individuals.\\
+	\textbf{5.} Replace the lowest-fitness individuals in the population with the new graph individuals.\\
+	}
+ \caption{\footnotesize Steps of the GraphEvol technique.}
+\label{graphEvolSteps}
+\end{algorithm}
+
+\subsection{Graph building algorithm}
+
+The initialisation of candidates is performed by employing a graph-building algorithm that is based on
+the planning graph approach discussed in the composition literature \cite{chen2014qos,deng2013efficient,huang2009effective}.
+At first, an algorithm is run to filter all services that will be potentially useful when building a solution, similar
+to the one presented in \cite{wang2013genetic}. These relevant services, along with the composition's desired inputs and outputs, are
+then presented to Algorithm \ref{generation}, whose task is to connect some of these nodes and form a non-redundant functionally
+correct solution (i.e. a solution where all service inputs and composition outputs are fulfilled without any superfluous connections
+between services).
+
+Algorithm \ref{generation} builds the graph from the \textit{start} to the \textit{end} node, thus preventing the formation of cyclical
+structures. It begins by adding the \textit{start} node to ghe graph, marking it as one of the
+\textit{seenNodes}, and adding some initial candidates to the \textit{candidateList} to be considered for connection. These candidates
+are identified using the \textit{findCands} function, which discovers which elements from the \textit{relevant} set have at least some
+of their input satisfied by the nodes already in the graph (i.e. the \textit{seenNodes}). Then, the building process begins, continuing
+as long as the composition outputs represented in \textit{end.inputs} have not been fulfilled by the currently available graph outputs
+in \textit{currentEndInputs}. In this process, a candidate \textit{cand} is selected at random from the \textit{candidateList}, and if
+it has not already been used in the graph and all of its inputs can be fulfilled by the currently available graph outputs, then it is
+connected to the graph using the \textit{connectNode} function. This function identifies a random, minimal set of edges connecting the
+new node (\textit{n}) to already existing nodes in the graph so that the inputs of this new node are fully satisfied. After connecting
+\textit{cand} to the graph, it is added to the set of \textit{seenNodes} and the \textit{candidateList} is updated to include services
+that may be fulfilled by the outputs of \textit{cand}. Finally, once the composition's required output has been reached, the \textit{end}
+node is connected. This particular graph building algorithm often results in \textit{dangling nodes}, which are chains of nodes that are
+connected to the graph but whose output is not used to fulfil any other nodes. Because of this, a routine to remove such chains (\textit{removeDangling})
+is executed on the graph before producing the completed structure. It is important to highlight that the selection of each candidate
+to connected with the graph, as well as the edges that should be used in this connection, is done stochastically, meaning that the
+resulting graph varies with each run of the algorithm.
+
+\begin{algorithm}
+ \setlength\hsize{0.9\linewidth}
+ \SetKwInOut{Input}{Input}\SetKwInOut{Output}{Output}
+ \SetKwFunction{connectNode}{connectNode}\SetKwFunction{findCands}{findCands}\SetKwFunction{removeDangling}{removeDangling}
+ \LinesNumbered
+ \SetNlSty{}{}{:}
+ \Input{$I$, $O$, $relevant$}
+ \Output{candidate graph $G$}
+ $start.outputs \leftarrow \{I\}$\;
+ $end.inputs \leftarrow \{O\}$\;
+ $G.edges \leftarrow \{\}$\;
+ $G.nodes \leftarrow \{start\}$\;
+ $seenNodes \leftarrow \{start\}$\;
+ $currEndInputs \leftarrow \{start.outputs\}$\;
+ $candidateList \leftarrow$ \findCands{$seenNodes, relevant$}\;
+ \While{$end.inputs \not\sqsubseteq currentEndInputs$}{\label{buildingLine}
+ $cand \leftarrow candidateList.next()$\;
+ \If{$cand \not\in seenNodes \wedge cand.inputs \sqsubseteq currEndInputs$}{
+ \connectNode{$cand, G$}\;
+ $currEndInputs \leftarrow currEndInputs \cup \{cand.outputs\}$\;
+ $seenNodes \leftarrow seenNodes \cup \{cand\}$\;
+ $candidateList \leftarrow candidateList \cup$ \findCands{$seenNodes, relevant$}\; 
+ }}
+ \connectNode{$end, G$}\;
+ \removeDangling{$G$}\;
+ \KwRet $G$\;
+ \vspace{2mm}
+ \SetKwProg{myproc}{Procedure}{}{}
+ \myproc{\connectNode{$n, G$}}{
+  $G.nodes \leftarrow G.nodes \cup \{n\}$\;
+   $inputsToFulfil \leftarrow \{cand.inputs\}$\;
+ \While{$|inputsToFulfil| > 0$}{
+	$graphN \leftarrow G.nodes.next()$\; 
+	\If{$|n.inputs \sqcap graphN.outputs| > 0$}{
+	  $inputsToFulfil \leftarrow inputsToFulfil - (n.inputs \sqcap graphN.outputs)$\;
+	  $G.edges \leftarrow G.edges \cup \{graphN \rightarrow n\}$\;
+    }
+ }}
+ \caption{\footnotesize Generating a new candidate graph.}
+\label{generation}
+\end{algorithm}
+
+\subsection{Mutation}
+
+Intuitively, the mutation operator for a graph candidate implements the same idea of the corresponding tree
+operator \cite{aversano2006genetic}: a subpart of the candidate should be removed and replaced with a new randomly generated fragment, all
+the while maintaining the functional properties of the original subpart (i.e. correct output-input matches where
+the subpart connects with the main part of the candidate). To do so, we begin by randomly selecting a node in the
+graph (excluding the end node) to act as the `root' of the subpart to be replaced. Subsequently, all nodes that
+are directly or indirectly dependent on the outputs of this root are also identified, all the way to the end node,
+as shown in Figure \ref{fig:mutationExample}. These nodes are removed from the graph, and all of its connections (edges) to the main
+part of the graph are severed. Finally, the incomplete graph is fed into Algorithm \ref{generation}, but beginning
+execution from line \ref{buildingLine}. This completes the graph and results in an offspring with the same main
+part as its parent, but with a distinct subpart.
+
+\begin{figure}
+\centerline{
+\fbox{
+\includegraphics[width=8cm]{mutationExample.pdf}}}
+\caption{Example of nodes and edges marked for deletion during the graph mutation operation.}
+\label{fig:mutationExample}
+\end{figure}
+
+\subsection{Crossover}
+Traditionally, the crossover operation involves the exchange of genetic material by two candidates in order to produce
+offspring with characteristics from both of its parents, thus encouraging further improvements on solutions that may already
+possess a certain degree of maturity \cite{qi1994theoretical}. In GP this exchange can be done simply by swapping two subtrees
+of two distinct candidates \cite{aversano2006genetic}, however in the GraphEvol context doing so would affect dependencies
+throughout the graph by compromising the correctness of the connections between the outputs and inputs of service nodes. Therefore,
+the idea of \textit{merging} and \textit{extracting} graphs has been employed in the implementation of this operator. Two candidate
+graphs are selected for the crossover, and these graphs are then merged into a single structure that maintains the structures of
+both graphs but as a consequence contains redundant nodes and edges. The merging process is depicted in Figure \ref{fig:crossoverExample},
+and consists of combining any two nodes that represent the same service into a single node, maintaining all original edges. Once the merge has
+taken place, an offspring can be extracted from the structure to obtain a new non-redundant solution. A modified version of Algorithm
+\ref{generation} is used for this task, where instead of adding candidates to the \textit{candidateList} from the entire set of
+\textit{relevant} nodes, only nodes from the merged structure can be considered. In particular, whenever a node is added to the extracted
+solution graph, only the service nodes it connects to (through an outgoing edge) in the merged graph structure are added to the
+\textit{candidateList}. This strategy restricts the offspring to utilise structures already present on either parent, thus achieving
+a similar outcome as traditional crossover operations. Figure \ref{fig:crossoverExample} highlights one of the possible solutions that
+could be extracted from the merged structure.
+
+\begin{figure}
+\centerline{
+\fbox{
+\includegraphics[width=8cm]{crossoverExample.pdf}}}
+\caption{Example of the merge and extraction process used in the graph crossover operation.}
+\label{fig:crossoverExample}
+\end{figure}
+
+\subsection{Fitness function}
+The fitness function employed for the evolutionary process is based on the one presented in \cite{rodriguez2010composition}. It seeks to
+produce solutions with the smallest possible number of service nodes and with the shortest possible paths from the start node to the
+end node. The rationale behind this function is that it encourages features indicative of the quality of the overall composition \cite{rodriguez2010composition}:
+the number of service nodes indicates the complexity of the overall composition (it should be as small as possible); the length of
+the longest path from the start node to the end node indicates the execution time of the composition solution, with a shorter
+path indicating more parallelisation of tasks and consequently a lower execution time. The fitness function is formally described as follows:
+
+\begin{equation}
+ fitness_i = \omega_1 \cdot \frac{1}{runPath_i} + \omega_2 \cdot \frac{1}{\#atomicProcess_i}
+\end{equation}
+
+\noindent where $ \omega_1 + \omega_2 = 1$, $runPath_i$ is the longest path from the start node to the end node of a solution $i$ (measured using a longest
+path algorithm), and $\#atomicProcess_i$ is the total number of service nodes included into a solution $i$. In the original paper, the fitness function also
+presents a third criterion measuring the degree of satisfaction of the inputs for each service node in the solution. In our case, however, this is not
+necessary, since the graph building algorithm used throughout the evolution process ensures that the inputs of each service included in a solution are
+always fully satisfied.
 
 \section{Experiment Design}\label{experimentdesign}
+Experiments were carried out to compare the performance of GraphEvol against the GP approach presented in \cite{rodriguez2010composition}, seeking to validate
+the hypothesis that the execution time, total number of service nodes, and longest path in the resulting compositions will be similar or smaller to those produced
+by GP. The validation of this hypothesis would indicate that GraphEvol is a suitable alternative to Web service composition using GP, matching the effectiveness of the
+latter while at the same time providing the benefits of a direct solution representation. The authors who introduced the GP approach also presented experimental
+results of that method's application to two datasets using a variety of composition tasks, thus those results will be used as the basis of this comparison.
+
+\subsection{Datasets}
+The datasets employed in this experiments were OWL-S TC \cite{kuster2008opossum} and WSC2008 \cite{bansal2008wsc}. Both of these datasets present service collections
+of varying sizes accompanied by conceptual ontologies
+
+\subsection{Parameters}
 
 \section{Results}\label{results}
+
+\subsection{Overall Results}
+
+\subsection{Discussions}
 
 \section{Conclusions}\label{conclusions}
 
 %% The file named.bst is a bibliography style file for BibTeX 0.99c
+\pagebreak
 \bibliographystyle{named}
 \bibliography{ijcai15}
 
