@@ -50,7 +50,7 @@ A Web service can be defined as a software module that accomplishes a specific t
 the Internet \cite{gottschalk2002introduction}. The fundamental benefit of such modules is that they can be interwoven with new applications, preventing developers from rewriting
 functionality that has already been implemented. Service-Oriented Architecture (SOA) is a paradigm that expands on this idea, advocating
 that the main atomic components of a software system should be Web services, since this maximizes code reuse and information sharing \cite{perrey2003service}.
-As services are typically present standard interfaces, the possibility arises to create approaches capable of combining services
+As services are typically present standard interfaces, the possibility arises to create approaches capable of combining them
 automatically according to the final desired system, in a process known as \textit{Web service composition} \cite{milanovic2004current}. The objective of these approaches
 is to produce a workflow, i.e. a directed acyclic graph (DAG), stipulating the sequence in which each atomic service should be executed, as well as
 the output-input connections between services.
@@ -59,20 +59,20 @@ Many approaches to Web service composition have been proposed in the literature,
 of integer linear programming solvers \cite{yoo2008web}. In particular, promising results have been achieved with the use of Evolutionary Computation (EC) techniques \cite{wang2012survey},
 because their search methods successfully handle the large search space characteristic of the composition problem. Existing evolutionary
 techniques for fully automated Web service composition can be divided into two different groups according to the extent of the composition they
-perform: \textit{semi-automated composition techniques}, assume that a general workflow of abstract tasks has already been provided and that the
+perform: \textit{semi-automated composition techniques} assume that a general workflow of abstract tasks has already been provided and that the
 algorithm must simply find the best candidate for each task slot; \textit{fully automated composition techniques}, on the other hand, make no such
 assumption, meaning that they construct the task workflow and select the most suitable candidates simultaneously. Because of their greater capabilities,
 fully automated composition techniques are the focus of this paper.
 
 While semi-automated composition can be accomplished using a variety of techniques such as Genetic Algorithms (GA) and Particle Swarm Optimisation
-(PSO) \cite{silva2014graph}, fully automated composition using EC is currently mostly restricted to techniques employing the traditional Genetic Programming (GP) model \cite{rodriguez2010composition}.
-In this paradigm, each each composition candidate is a tree that represents an underlying graph solution that can be obtained through a translation
+(PSO) \cite{wang2012survey}, fully automated composition using EC is currently mostly restricted to techniques employing the traditional Genetic Programming (GP) model \cite{rodriguez2010composition}.
+In this paradigm, each composition candidate is a tree that represents an underlying graph solution that can be obtained through a translation
 process. The question then arises whether it is possible to represent a candidate directly as a graph, and whether the system's performance is affected
 from doing so. Thus, the objective of this paper is to present and analyse \textit{GraphEvol}, an evolutionary computation technique for Web service
 composition where each candidate is represented as a DAG and modified while remaining in that form. Apart from possible performance gains, the main
-advantage of GraphEvol is that it represents each solution in an intuitive and direct way, allowing a more powerful way of ensuring that solutions
+advantage of GraphEvol is that it represents each solution in an intuitive and direct way, allowing for a more powerful way of ensuring that solutions
 meet correctness constraints. The remainder of this paper is organised as follows:
-Section \ref{background} presents background information concerning Web service composition; Section \ref{graphevol} presents the proposed technique;
+Section \ref{background} contains background information concerning Web service composition; Section \ref{graphevol} presents the proposed technique;
 Section \ref{experimentdesign} discusses the experiments conducted to compare the performance GraphEvol to that of a GP composition approach;
 Section \ref{results} describes the experiment results; Section \ref{conclusions} concludes the paper.
 
@@ -107,7 +107,7 @@ then used to book return flight tickets, and to determine the customer's arrival
 There are many publications on the subject of EC applied to Web service composition, but this Subsection will focus on those which perform fully automated composition,
 since their composition outcomes are analogous to those of GraphEvol. One of the pioneering GP composition approaches \cite{aversano2006genetic} uses workflow constructs as the non-terminal tree nodes and Web service candidates as the terminal nodes, where workflow constructs represent the output-input connections between
 two services. For example, if two services are sequentially connected, so that output of service \textit{A} is used as the input of service \textit{B}, this would be represented
-by a \textit{sequence} workflow construct having \textit{A} as the left child and \textit{B} as the right one. Likewise, if two services \textit{A} and \textit{B} have independent inputs and outputs and can be executed in parallel, this can be encoded as a \textit{flow} construct having \textit{A} and \textit{B} as its children. An example of a tree generated by this technique is shown in Figure \ref{fig:treeExample}, adapted from an illustration in the referenced work. The initial population is initialised randomly, which means that the initial compositions represented in that generation are very unlikely to be executable, since their inputs and outputs are mismatched. The aim of the technique is to improve these output-input matches by employing a fitness function that calculates their correspondence and awards higher fitness scores to those candidates with larger overlaps. The genetic operators employed for this evolutionary process are crossover, where two subtrees from two individuals are randomly selected and swapped, and mutation, where a subtree for an individual is replaced with a randomly generated substitute.
+by a \textit{sequence} workflow construct having \textit{A} as the left child and \textit{B} as the right one. Likewise, if two services \textit{A} and \textit{B} have independent inputs and outputs and would be executed in parallel, this can be encoded as a \textit{flow} construct having \textit{A} and \textit{B} as its children. An example of a tree generated by this technique is shown in Figure \ref{fig:treeExample}, adapted from an illustration in the referenced work. The initial population is initialised randomly, which means that the initial compositions represented in that generation are very unlikely to be executable, since their inputs and outputs are mismatched. The aim of the technique is to improve these output-input matches by employing a fitness function that calculates their correspondence and awards higher fitness scores to those candidates with larger output-input overlaps. The genetic operators employed for this evolutionary process are crossover, where two subtrees from two individuals are randomly selected and swapped, and mutation, where a subtree for an individual is replaced with a randomly generated substitute.
 
 Another GP approach \cite{rodriguez2010composition} follows a similar tree representation to the one discussed above, as well as a similar implementation of mutation and crossover operators. The greatest distinction between this approach and others is in its use of a context-free grammar to generate the initial population of candidates and to create the subtrees used during mutation. The grammar restricts the tree structure configurations allowed in the tree, thus reducing the search space considered when searching for a solution. Another key difference of this approach is in its fitness function, which not only minimises the output-input mismatches in candidates, but also minimises the overall number of atomic services in the composition and the size of the largest sequential chain of such services. These two additions to the fitness function are aimed at reducing the overall execution time and cost of the resulting compositions. This technique was tested against two well-known semantically-annotated datasets, OWL-S TC \cite{kuster2008opossum} and WSC 2008 \cite{bansal2008wsc}, showing that it yields valid solutions to all composition tasks while requiring a relatively low amount of execution time.
 
@@ -213,9 +213,9 @@ Algorithm \ref{generation} builds the graph from the \textit{start} to the \text
 structures. It begins by adding the \textit{start} node to the graph, marking it as one of the
 \textit{seenNodes}, and adding some initial candidates to the \textit{candidateList} to be considered for connection. These candidates
 are identified using the \textit{findCands} function, which discovers which elements from the \textit{relevant} set have at least some
-of their input satisfied by the nodes already in the graph (i.e. the \textit{seenNodes}). Then, the building process begins, continuing
+of their input satisfied by the nodes already in the graph (i.e. the \textit{seenNodes}). Then the building process begins, continuing
 as long as the composition outputs represented in \textit{end.inputs} have not been fulfilled by the currently available graph outputs
-in \textit{currentEndInputs}. In this process, a candidate \textit{cand} is selected at random from the \textit{candidateList}, and if
+in \textit{currentEndInputs}. In this process, a candidate \textit{cand} is selected at random from the \textit{candidateList}. If
 it has not already been used in the graph and all of its inputs can be fulfilled by the currently available graph outputs, then it is
 connected to the graph using the \textit{connectNode} function. This function identifies a random, minimal set of edges connecting the
 new node (\textit{n}) to already existing nodes in the graph so that the inputs of this new node are fully satisfied. After connecting
@@ -248,7 +248,7 @@ possess a certain degree of maturity \cite{qi1994theoretical}. In GP this exchan
 of two distinct candidates \cite{aversano2006genetic}, however in the GraphEvol context doing so would affect dependencies
 throughout the graph by compromising the correctness of the connections between the outputs and inputs of service nodes. Therefore,
 the idea of \textit{merging} and \textit{extracting} graphs has been employed in the implementation of this operator. Two candidate
-graphs are selected for the crossover, and these graphs are then merged into a single structure that maintains the structures of
+graphs are selected for the crossover, and these graphs are then merged into a single structure that maintains the dependencies of
 both graphs but as a consequence contains redundant nodes and edges. The merging process is depicted in Figure \ref{fig:crossoverExample},
 and consists of combining any two nodes that represent the same service into a single node, maintaining all original edges. Once the merge has
 taken place, an offspring can be extracted from the structure to obtain a new non-redundant solution. A modified version of Algorithm
@@ -280,7 +280,7 @@ path indicating more parallelisation of tasks and consequently a lower execution
 \end{equation}
 
 \noindent where $ \omega_1 + \omega_2 = 1$, $runPath_i$ is the longest path from the start node to the end node of a solution $i$ (measured using a longest
-path algorithm), and $\#atomicProcess_i$ is the total number of service nodes included into a solution $i$. In the original paper, the fitness function also
+path algorithm), and $\#atomicProcess_i$ is the total number of service nodes included in a solution $i$. In the original paper, the fitness function also
 presents a third criterion measuring the degree of satisfaction of the inputs for each service node in the solution. In our case, however, this is not
 necessary, since the graph building algorithm used throughout the evolution process ensures that the inputs of each service included in a solution are
 always fully satisfied.
