@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013) (format=pdflatex 2014.11.27)  27 JAN 2015 13:51
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013) (format=pdflatex 2014.11.27)  28 JAN 2015 16:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -222,136 +222,170 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 25.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 25.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 25.
 
-(/usr/pkg/share/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
 
-<compositionExample.pdf, id=1, 343.96002pt x 253.09555pt>
-File: compositionExample.pdf Graphic file (type pdf)
+LaTeX Warning: No \author given.
 
-<use compositionExample.pdf>
-Package pdftex.def Info: compositionExample.pdf used on input line 44.
-(pdftex.def)             Requested size: 227.62204pt x 167.49155pt.
+
+Underfull \vbox (badness 1400) has occurred while \output is active []
+
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
- <./compositionExample.pdf>]
+]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 75.
 
-<treeExample.pdf, id=40, 384.16022pt x 289.41876pt>
+<compositionExample.pdf, id=9, 343.96002pt x 253.09555pt>
+File: compositionExample.pdf Graphic file (type pdf)
+
+<use compositionExample.pdf>
+Package pdftex.def Info: compositionExample.pdf used on input line 87.
+(pdftex.def)             Requested size: 227.62204pt x 167.49155pt.
+
+<treeExample.pdf, id=10, 384.16022pt x 289.41876pt>
 File: treeExample.pdf Graphic file (type pdf)
  <use treeExample.pdf>
-Package pdftex.def Info: treeExample.pdf used on input line 102.
+Package pdftex.def Info: treeExample.pdf used on input line 104.
 (pdftex.def)             Requested size: 227.62204pt x 171.48425pt.
 
-[2 <./treeExample.pdf>] <graphExample.pdf, id=76, 384.16022pt x 382.88045pt>
-File: graphExample.pdf Graphic file (type pdf)
+[2 <./compositionExample.pdf> <./treeExample.pdf
 
-<use graphExample.pdf>
-Package pdftex.def Info: graphExample.pdf used on input line 117.
+pdfTeX warning: /usr/pkg/bin/pdflatex (file ./treeExample.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>] <graphExample.pdf, id=74, 384.16022pt x 382.88045pt>
+File: graphExample.pdf Graphic file (type pdf)
+ <use graphExample.pdf>
+Package pdftex.def Info: graphExample.pdf used on input line 119.
 (pdftex.def)             Requested size: 227.62204pt x 226.86147pt.
+
+Underfull \vbox (badness 1895) has occurred while \output is active []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 124.
- <mutationExample.pdf, id=77, 330.4094pt x 126.8489pt>
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 171.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 171.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 179.
+
+
+(/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./graphExample.pdf>]
+<mutationExample.pdf, id=111, 330.4094pt x 126.8489pt>
 File: mutationExample.pdf Graphic file (type pdf)
 
 <use mutationExample.pdf>
-Package pdftex.def Info: mutationExample.pdf used on input line 157.
+Package pdftex.def Info: mutationExample.pdf used on input line 223.
 (pdftex.def)             Requested size: 227.62204pt x 87.38647pt.
- [3 <./graphExample.pdf> <./mutationExample.pdf
 
-pdfTeX warning: /usr/pkg/bin/pdflatex (file ./mutationExample.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
->]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 176.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 176.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 184.
 
- (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-) [4]
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <./mutationExample.pdf>]
 <crossoverExample.pdf, id=158, 284.18672pt x 458.19931pt>
 File: crossoverExample.pdf Graphic file (type pdf)
 
 <use crossoverExample.pdf>
-Package pdftex.def Info: crossoverExample.pdf used on input line 265.
+Package pdftex.def Info: crossoverExample.pdf used on input line 274.
 (pdftex.def)             Requested size: 227.62204pt x 367.0144pt.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 304.
+(Font)              <9> on input line 314.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 304.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 314.
  [5 <./crossoverExample.pdf>] [6] (./ijcai15.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 5--10
+Underfull \hbox (badness 1033) in paragraph at lines 5--9
+[]\OT1/ptm/m/n/10 Danilo Ardagna and Bar-bara
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--17
 []\OT1/ptm/m/n/10 Lerina Aver-sano, Mas-si-m-il-iano
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 13--19
+Underfull \hbox (badness 1033) in paragraph at lines 20--26
 \OT1/ptm/m/n/10 Kona, Stef-fen Bleul, Thomas Weise, and Michael C
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--73
+Underfull \hbox (badness 4193) in paragraph at lines 29--33
+[]\OT1/ptm/m/n/10 Antonio Buc-chiarone, Mar-tina
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+[]\OT1/ptm/m/n/10 Kishore Channabasava-iah,
+ []
+
+
+Underfull \hbox (badness 1082) in paragraph at lines 36--39
+\OT1/ptm/m/n/10 Ker-rie Hol-ley, and Ed-ward Tug-gle.  Mi-grat-ing to a
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 []\OT1/ptm/m/n/10 Nikola Mi-lanovic and
  []
 
 
-Underfull \hbox (badness 1009) in paragraph at lines 70--73
+Underfull \hbox (badness 1009) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 Miroslaw Malek.  Cur-rent so-lu-tions for web ser-vice
  []
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 70--73
+Underfull \hbox (badness 1173) in paragraph at lines 97--100
 \OT1/ptm/m/n/10 com-po-si-tion.  \OT1/ptm/m/it/10 IEEE In-ter-net Com-put-ing\O
 T1/ptm/m/n/10 , 8(6):51--59,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 81--86
+Underfull \hbox (badness 10000) in paragraph at lines 108--113
 []\OT1/ptm/m/n/10 Xiaofeng Qi and Francesco
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--92
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
 []\OT1/ptm/m/n/10 Pablo Rodriguez-Mier,
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 89--92
+Underfull \hbox (badness 4366) in paragraph at lines 116--119
 \OT1/ptm/m/n/10 Com-po-si-tion of web ser-vices through ge-netic pro-
  []
 
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no ‹ in font ptmr7t!
+Missing character: There is no † in font ptmr7t!
 
-Underfull \hbox (badness 2772) in paragraph at lines 109--113
+Underfull \hbox (badness 2772) in paragraph at lines 144--148
 []\OT1/ptm/m/n/10 Anqi Wang, Hui Ma, and Mengjie
  []
 
 )
-Extra height:0.0pt when 476.6524pt
-(2)Left:476.6524pt Right:477.30481pt Output:476.6524pt
-(2)Left:477.30481pt Right:477.30481pt Output:477.30481pt
+Extra height:0.0pt when 642.6524pt
+(2)Left:642.6524pt Right:654.30481pt Output:642.6524pt
+(2)Left:654.30481pt Right:631.1399pt Output:654.30481pt
 - LAST -
 Extra skip:0.0pt
-Left:477.30481pt
-Right:477.30481pt
-Output:477.30481pt
+Left:654.30481pt
+Right:631.1399pt
+Output:654.30481pt
  [7
 
 ] (./ijcai15.aux) ) 
 Here is how much of TeX's memory you used:
- 3131 strings out of 493945
- 44017 string characters out of 6159095
- 137454 words of memory out of 5000000
- 6333 multiletter control sequences out of 15000+600000
- 25110 words of font info for 50 fonts, out of 8000000 for 9000
+ 3118 strings out of 493945
+ 43828 string characters out of 6159095
+ 146317 words of memory out of 5000000
+ 6324 multiletter control sequences out of 15000+600000
+ 24032 words of font info for 49 fonts, out of 8000000 for 9000
  774 hyphenation exceptions out of 8191
  38i,17n,26p,1259b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
@@ -365,7 +399,7 @@ sr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/pkg/shar
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/pkg/share/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ijcai15.pdf (7 pages, 1062704 bytes).
+Output written on ijcai15.pdf (7 pages, 1062322 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams

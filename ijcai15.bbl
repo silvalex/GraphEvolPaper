@@ -1,5 +1,12 @@
 \begin{thebibliography}{}
 
+\bibitem[\protect\citeauthoryear{Ardagna and
+  Pernici}{2007}]{ardagna2007adaptive}
+Danilo Ardagna and Barbara Pernici.
+\newblock Adaptive service composition in flexible processes.
+\newblock {\em Software Engineering, IEEE Transactions on}, 33(6):369--384,
+  2007.
+
 \bibitem[\protect\citeauthoryear{Aversano \bgroup \em et al.\egroup
   }{2006}]{aversano2006genetic}
 Lerina Aversano, Massimiliano Di~Penta, and Kunal Taneja.
@@ -16,6 +23,19 @@ Ajay Bansal, M~Brian Blake, Srividya Kona, Steffen Bleul, Thomas Weise, and
 \newblock In {\em E-Commerce Technology and the Fifth IEEE Conference on
   Enterprise Computing, E-Commerce and E-Services, 2008 10th IEEE Conference
   on}, pages 351--354. IEEE, 2008.
+
+\bibitem[\protect\citeauthoryear{Bucchiarone \bgroup \em et al.\egroup
+  }{2014}]{bucchiarone2014domain}
+Antonio Bucchiarone, Martina De~Sanctis, and Marco Pistore.
+\newblock Domain objects for dynamic and incremental service composition.
+\newblock In {\em Service-Oriented and Cloud Computing}, pages 62--80.
+  Springer, 2014.
+
+\bibitem[\protect\citeauthoryear{Channabasavaiah \bgroup \em et al.\egroup
+  }{2003}]{channabasavaiah2003migrating}
+Kishore Channabasavaiah, Kerrie Holley, and Edward Tuggle.
+\newblock Migrating to a service-oriented architecture.
+\newblock {\em IBM DeveloperWorks}, 16, 2003.
 
 \bibitem[\protect\citeauthoryear{Chen and Yan}{2014}]{chen2014qos}
 Min Chen and Yuhong Yan.
@@ -65,6 +85,13 @@ U~Kuster, Birgitta Konig-Ries, and Andreas Krug.
 \newblock In {\em Semantic Computing, 2008 IEEE International Conference on},
   pages 480--481. IEEE, 2008.
 
+\bibitem[\protect\citeauthoryear{Liu \bgroup \em et al.\egroup
+  }{2007}]{liu2007dynamic}
+Shu-Lei Liu, Yun-Xiang Liu, Fan Zhang, Gui-Fen Tang, and Ning Jing.
+\newblock Dynamic web services selection algorithm with qos global optimal in
+  web services composition.
+\newblock {\em Ruan Jian Xue Bao(Journal of Software)}, 18(3):646--656, 2007.
+
 \bibitem[\protect\citeauthoryear{Milanovic and
   Malek}{2004}]{milanovic2004current}
 Nikola Milanovic and Miroslaw Malek.
@@ -97,6 +124,14 @@ Biplav Srivastava and Jana Koehler.
 \newblock In {\em ICAPS 2003 workshop on Planning for Web Services}, volume~35,
   pages 28--35, 2003.
 
+\bibitem[\protect\citeauthoryear{Su \bgroup \em et al.\egroup
+  }{2014}]{su2014efficient}
+Kai Su, Ma~Liangli, Guo Xiaoming, and Sun Yufei.
+\newblock An efficient parameter-adaptive genetic algorithm for service
+  selection with end-to-end qos constraints⋆.
+\newblock {\em Journal of Computational Information Systems}, 10(2):581--588,
+  2014.
+
 \bibitem[\protect\citeauthoryear{Wang \bgroup \em et al.\egroup
   }{2012}]{wang2012survey}
 Lijuan Wang, Jun Shen, and Jianming Yong.
@@ -110,6 +145,13 @@ Anqi Wang, Hui Ma, and Mengjie Zhang.
 \newblock Genetic programming with greedy search for web service composition.
 \newblock In {\em Database and Expert Systems Applications}, pages 9--17.
   Springer, 2013.
+
+\bibitem[\protect\citeauthoryear{Yin \bgroup \em et al.\egroup
+  }{2014}]{yin2014hybrid}
+Hao Yin, Changsheng Zhang, Bin Zhang, Ying Guo, and Tingting Liu.
+\newblock A hybrid multiobjective discrete particle swarm optimization
+  algorithm for a sla-aware service composition problem.
+\newblock {\em Mathematical Problems in Engineering}, 2014, 2014.
 
 \bibitem[\protect\citeauthoryear{Yoo \bgroup \em et al.\egroup
   }{2008}]{yoo2008web}
