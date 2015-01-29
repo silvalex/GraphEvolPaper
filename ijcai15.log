@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013) (format=pdflatex 2014.11.27)  29 JAN 2015 16:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (Web2C 2013) (format=pdflatex 2014.11.27)  30 JAN 2015 11:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -226,8 +226,6 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
 
 Underfull \vbox (badness 1400) has occurred while \output is active []
 
@@ -236,6 +234,9 @@ Underfull \vbox (badness 1400) has occurred while \output is active []
 
 
 ]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
+
 <compositionExample.pdf, id=9, 343.96002pt x 253.09555pt>
 File: compositionExample.pdf Graphic file (type pdf)
 
@@ -263,10 +264,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 
 [3 <./graphExample.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 175.
+(Font)              <7> on input line 169.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 175.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 183.
+(Font)              <5> on input line 169.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 177.
 
  (/usr/pkg/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
@@ -274,19 +275,19 @@ File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 File: mutationExample.pdf Graphic file (type pdf)
 
 <use mutationExample.pdf>
-Package pdftex.def Info: mutationExample.pdf used on input line 225.
+Package pdftex.def Info: mutationExample.pdf used on input line 218.
 (pdftex.def)             Requested size: 227.62204pt x 87.38647pt.
  [4 <./mutationExample.pdf>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 272.
+(Font)              <9> on input line 265.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 272.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
 
 <crossoverExample.pdf, id=158, 284.18672pt x 458.19931pt>
 File: crossoverExample.pdf Graphic file (type pdf)
 
 <use crossoverExample.pdf>
-Package pdftex.def Info: crossoverExample.pdf used on input line 301.
+Package pdftex.def Info: crossoverExample.pdf used on input line 294.
 (pdftex.def)             Requested size: 227.62204pt x 367.0144pt.
 
 
@@ -376,11 +377,11 @@ Output:654.30481pt
 Here is how much of TeX's memory you used:
  3118 strings out of 493945
  43828 string characters out of 6159095
- 146317 words of memory out of 5000000
+ 146313 words of memory out of 5000000
  6324 multiletter control sequences out of 15000+600000
  24032 words of font info for 49 fonts, out of 8000000 for 9000
  774 hyphenation exceptions out of 8191
- 38i,17n,26p,1259b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,17n,26p,1260b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/pkg/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr
 /pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/pkg/share
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/pkg/share/texmf-dist
@@ -392,7 +393,7 @@ sr/pkg/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/pkg/shar
 e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/pkg/share/texmf-dist/font
 s/type1/urw/times/utmb8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/pkg/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ijcai15.pdf (7 pages, 1062778 bytes).
+Output written on ijcai15.pdf (7 pages, 1062648 bytes).
 PDF statistics:
  304 PDF objects out of 1000 (max. 8388607)
  113 compressed objects within 2 object streams
